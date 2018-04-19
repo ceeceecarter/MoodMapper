@@ -11,13 +11,13 @@ class App extends Component {
   render () {
     return (
       <Wrapper>
-      <Container>
+      <Container className="reactstrapContainer">
         <Row>
-          <Col className="navbar"><Navbar /></Col>
+          <Col md="12" className="navbar"><Navbar /></Col>
         </Row>
         <Row>
-          <Col md="4" className="sidebar"><Sidebar /> </Col>
-          <Col md ="8" className="main"><Main /></Col>
+          <Col md="2" className="sidebar"><Sidebar /> </Col>
+          <Col md ="10" className="main"><Main /></Col>
         </Row>
         <Row>
           <Col md="12" className="footer"><Footer /></Col>

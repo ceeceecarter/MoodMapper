@@ -5,6 +5,7 @@
 .navbar {
   background-color: lightblue;
   height: 5rem;
+  margin: 0;
 }
 
 .sidebar {

@@ -53,6 +53,8 @@ export default class navbar extends React.Component {
                     Reset
                   </DropdownItem>
                 </DropdownMenu>
+                </UncontrolledDropdown>
+                
                 <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav>
                   Options
@@ -70,6 +72,7 @@ export default class navbar extends React.Component {
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
+
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav>
                   Options
@@ -87,7 +90,7 @@ export default class navbar extends React.Component {
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
-              </UncontrolledDropdown>
+              
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav>
                   Options

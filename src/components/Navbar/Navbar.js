@@ -36,7 +36,7 @@ export default class navbar extends React.Component {
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
-<<<<<<< Updated upstream
+
            
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav>
@@ -54,7 +54,7 @@ export default class navbar extends React.Component {
                     Reset
                   </DropdownItem>
                 </DropdownMenu>
-=======
+
 
               {/* -----Create new----- */}
             <NavItem>
@@ -63,7 +63,9 @@ export default class navbar extends React.Component {
 
                {/* -----MoodHistory---- */}
 
->>>>>>> Stashed changes
+
+                </UncontrolledDropdown>
+
                 <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
                   Mood History
@@ -77,7 +79,7 @@ export default class navbar extends React.Component {
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
-<<<<<<< Updated upstream
+
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav>
                   Options
@@ -95,8 +97,8 @@ export default class navbar extends React.Component {
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
+
               </UncontrolledDropdown>
-=======
 
                {/* -----FAQ----- */}
               <NavItem>
@@ -105,7 +107,7 @@ export default class navbar extends React.Component {
               
 
                {/* -----Profile----- */}
->>>>>>> Stashed changes
+
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
                   Profile 

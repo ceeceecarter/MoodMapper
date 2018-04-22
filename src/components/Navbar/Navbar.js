@@ -36,75 +36,43 @@ export default class navbar extends React.Component {
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
-           
-              <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav>
-                  Options
-                </DropdownToggle>
-                <DropdownMenu >
-                  <DropdownItem>
-                    Option 1
-                  </DropdownItem>
-                  <DropdownItem>
-                    Option 2
-                  </DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>
-                    Reset
-                  </DropdownItem>
-                </DropdownMenu>
-                </UncontrolledDropdown>
-                
+
+              {/* -----Create new----- */}
+            <NavItem>
+                <NavLink href="/survey/">Create New</NavLink>
+              </NavItem>
+
+               {/* -----MoodHistory---- */}
+
                 <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav>
-                  Options
+                <DropdownToggle nav caret>
+                  Mood History
                 </DropdownToggle>
                 <DropdownMenu>
                   <DropdownItem>
-                    Option 1
+                     View Graph
                   </DropdownItem>
                   <DropdownItem>
-                    Option 2
-                  </DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>
-                    Reset
+                    Edit Previous Entry
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
 
-              <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav>
-                  Options
-                </DropdownToggle>
-                <DropdownMenu>
-                  <DropdownItem>
-                    Option 1
-                  </DropdownItem>
-                  <DropdownItem>
-                    Option 2
-                  </DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>
-                    Reset
-                  </DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
+               {/* -----FAQ----- */}
+              <NavItem>
+                <NavLink href="/faq/">FAQ</NavLink>
+              </NavItem>
               
               <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav>
-                  Options
+                <DropdownToggle nav caret>
+                  Profile 
                 </DropdownToggle>
                 <DropdownMenu>
                   <DropdownItem>
-                    Option 1
+                    Your Profile
                   </DropdownItem>
                   <DropdownItem>
-                    Option 2
-                  </DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>
-                    Reset
+                    Logout
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>

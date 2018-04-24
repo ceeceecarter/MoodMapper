@@ -13,11 +13,11 @@ module.exports = function(app){
     app.post("/api/survey", function(req, res){
 
         db.Mood.create({
-            anxiety: req.body.X,
-            depression: req.body.X,
-            concentration: req.body.X,
-            energy: req.body.X,
-            happiness: req.body.X,
+            anxiety: req.body.id.type,
+            depression: req.body.id.type,
+            concentration: req.body.id.type,
+            energy: req.body.id.type,
+            happiness: req.body.id.type,
             // usersssssss: XXXX            
         }).then(function(data){
             res.json(data);

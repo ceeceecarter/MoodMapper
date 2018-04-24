@@ -1,88 +1,133 @@
 var quizQuestions = [
   {
-      question: "How are you feeling today?",
+      question: "How anxious are you feeling today? (1 being least, 5 being most)",
+      id: 1,
       answers: [
           {
-              type: "happy",
-              content: "Happy"
+              type: "1",
+              content: "1"
           },
           {
-              type: "depressed",
-              content: "Depressed"
+              type: "2",
+              content: "2"
           },
           {
-              type: "anxious",
-              content: "Anxious"
-          }
+              type: "3",
+              content: "3"
+          },
+          {
+            type: "4",
+            content: "4"
+        },
+        {
+            type: "5",
+            content: "5"
+        }
       ]
   },
   {
-      question: "No, really....how are you feeling today?",
+      question: "How depressed are you feeling today?",
+      id: 2,
       answers: [
-          {
-              type: "happy",
-              content: "Happy"
-          },
-          {
-              type: "depressed",
-              content: "Depressed"
-          },
-          {
-              type: "anxious",
-              content: "Anxious"
-          }
-      ]
+        {
+            type: "1",
+            content: "1"
+        },
+        {
+            type: "2",
+            content: "2"
+        },
+        {
+            type: "3",
+            content: "3"
+        },
+        {
+          type: "4",
+          content: "4"
+      },
+      {
+          type: "5",
+          content: "5"
+      }
+    ]
   },
   {
       question: "What would make you feel better right now?",
+      id: 3,
       answers: [
-          {
-              type: "depressed",
-              content: "Sleeping"
-          },
-          {
-              type: "happy",
-              content: "I already feel pretty great"
-          },
-          {
-              type: "anxiou",
-              content: "Fidgiting with Something"
-          }
-      ]
+        {
+            type: "1",
+            content: "1"
+        },
+        {
+            type: "2",
+            content: "2"
+        },
+        {
+            type: "3",
+            content: "3"
+        },
+        {
+          type: "4",
+          content: "4"
+      },
+      {
+          type: "5",
+          content: "5"
+      }
+    ]
   },
   {
       question: "Your coding language says a lot about your mood. Which do you prefer to work with?",
+      id: 4,
       answers: [
-          {
-              type: "happy",
-              content: "JavaScript"
-          },
-          {
-              type: "anxious",
-              content: "Python"
-          },
-          {
-              type: "depressed",
-              content: "C++"
-          }
-      ]
+        {
+            type: "1",
+            content: "1"
+        },
+        {
+            type: "2",
+            content: "2"
+        },
+        {
+            type: "3",
+            content: "3"
+        },
+        {
+          type: "4",
+          content: "4"
+      },
+      {
+          type: "5",
+          content: "5"
+      }
+    ]
   },
   {
       question: "Do you drink?",
+      id: 5,
       answers: [
-          {
-              type: "happy",
-              content: "Yes"
-          },
-          {
-              type: "depressed",
-              content: "Way Too Often"
-          },
-          {
-              type: "anxious",
-              content: "No"
-          }
-      ]
+        {
+            type: "1",
+            content: "1"
+        },
+        {
+            type: "2",
+            content: "2"
+        },
+        {
+            type: "3",
+            content: "3"
+        },
+        {
+          type: "4",
+          content: "4"
+      },
+      {
+          type: "5",
+          content: "5"
+      }
+    ]
   }
 ];
 

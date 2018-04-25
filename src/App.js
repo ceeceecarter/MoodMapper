@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from 'reactstrap';
 import Wrapper from "./components/Wrapper";
-import Navbar from "./components/Navbar";
+import NavTabs from "./components/NavTabs";
 import Sidebar from "./components/Sidebar";
 import Main from "./components/Main";
 import Footer from "./components/Footer";
@@ -13,7 +13,7 @@ class App extends Component {
       <Wrapper>
       <Container className="reactstrapContainer">
         <Row>
-          <Col md="12" className="navbar"><Navbar /></Col>
+          <Col md="12" className="navbar"><NavTabs /></Col>
         </Row>
         <Row>
           <Col md="2" className="sidebar"><Sidebar /> </Col>

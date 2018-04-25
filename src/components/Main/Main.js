@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import NavTabs from "./NavTabs";
-import Faq from "./pages/Faq";
-import Graph from "./pages/Graph";
-import History from "./pages/History";
-import Home from "./pages/Home";
-import Profile from "./pages/Profile";
-import Survey from "./pages/Survey";
+import NavTabs from "../NavTabs";
+import Faq from "../Pages/Faq";
+import Graph from "../Pages/Graph";
+import History from "../Pages/History";
+import Home from "../Pages/Home";
+import Profile from "../Pages/Profile";
+import Survey from "../Pages/Survey";
 
 class Main extends Component {
   state = {
@@ -35,17 +35,6 @@ class Main extends Component {
     }
   };
 
-  render() {
-    return (
-      <div>
-        <NavTabs
-          currentPage={this.state.currentPage}
-          handlePageChange={this.handlePageChange}
-        />
-        {this.renderPage()}
-      </div>
-    );
-  }
 }
 
 export default Main;

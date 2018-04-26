@@ -11,10 +11,20 @@ class SidebarContainer extends Component {
                 "quoteText": "Difficulties are things that show a person what they are.  ",
                 "quoteAuthor": "Epictetus ",
                        
-        },
-        // search: "http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=?"
+        }     
     };
 
+    componentDidMount() {
+       console.log("HEYYY");
+       this.searchQuotes("https://cors-anywhere.herokuapp.com/https://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=?");
+    }
+    
+
+   searchQuotes = query => {
+       axios.get(query)
+       .then(res => console.log(res));
+       
+   };  
 
     render(){
         return (

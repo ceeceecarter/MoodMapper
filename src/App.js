@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Container, Row, Col } from "reactstrap";
 import Wrapper from "./components/Wrapper";
 import NavTabs from "./components/NavTabs";
+ 
+import SidebarContainer from "./components/Sidebar";
 import Sidebar from "./components/Sidebar";
 // import Main from "./components/Main";
 import Footer from "./components/Footer";
@@ -28,7 +30,7 @@ class App extends Component {
             </Row>
             <Row>
               <Col md="2" className="sidebar">
-                <Sidebar />{" "}
+                <SidebarContainer />{" "}
               </Col>
               <Col md="10" className="home">
                 <Switch>

@@ -16,6 +16,8 @@ class Main extends Component {
     this.setState({ currentPage: page });
   };
 
+
+  //How to target where to render this?!
   renderPage = () => {
     if (this.state.currentPage === "Home") {
       return <Home />;
@@ -31,10 +33,21 @@ class Main extends Component {
       return <Survey/>;
 
     } else {
-      return <Home/>;
+      return <Home />;
     }
   };
 
+  render() {
+    return (
+      <div>
+        <NavTabs
+          currentPage={this.state.currentPage}
+          handlePageChange={this.handlePageChange}
+        />
+        {this.renderPage()}
+      </div>
+    );
+  }
 }
 
 export default Main;

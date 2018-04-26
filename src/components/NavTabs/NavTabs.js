@@ -1,97 +1,63 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
 import "./NavTabs.css";
 import Main from "../Main";
-// import {
-//   Collapse,
-//   Navbar,
-//   NavbarToggler,
-//   NavbarBrand,
-//   Nav,
-//   NavItem,
-//   NavLink,
-//   UncontrolledDropdown,
-//   DropdownToggle,
-//   DropdownMenu,
-//   DropdownItem } from 'reactstrap';
-  
 
-  const NavTabs = props => (
-    <ul className="nav nav-tabs">
-      <li className="nav-item">
-        <a
-          onClick={() => props.handlePageChange("Home")}
-          className={
-            props.currentPage === "Home" ? "nav-link active" : "nav-link"
-          }
-        >
-          Mood | Mapper
-        </a>
-      </li>
-      <li className="nav-item">
-        <a
-          onClick={() => props.handlePageChange("Survey")}
-          className={
-            props.currentPage === "Survey" ? "nav-link active" : "nav-link"
-          }
-        >
-          Add Entry
-        </a>
-      </li>
-
-      <li className="nav-item">
-        <a
-          onClick={() => props.handlePageChange("History")}
-          className={
-            props.currentPage === "History" ? "nav-link active" : "nav-link"
-          }
-        >
-         Mood History
-        </a>
-      </li>
-
-     <li className="nav-item">
-        <a
-          onClick={() => props.handlePageChange("Faq")}
-          className={
-            props.currentPage === "Faq" ? "nav-link active" : "nav-link"
-          }
-        >
-          Faq
-        </a>
-      </li>
-      <li className="nav-item">
-        <a
-          onClick={() => props.handlePageChange("Profile")}
-          className={
-            props.currentPage === "Profile" ? "nav-link active" : "nav-link"
-          }
-        >
-          Profile
-        </a>
+const NavTabs = props => (
+  <ul className="nav nav-tabs">
+    <li
+      className={
+        window.location.pathname === "/" ? "nav-link active" : "nav-link"
+      }
+    >
+      <Link to="/" className="nav-link">
+        Mood Mapper
+      </Link>
     </li>
-    </ul>
-  );
-  
-  export default NavTabs;
 
+    <li
+      className={
+        window.location.pathname === "/Survey" ? "nav-link active" : "nav-link"
+      }
+    >
+      <Link to="/Survey" className="nav-link">
+        Create New
+      </Link>
+    </li>
 
+    <li
+      className={
+        window.location.pathname === "/Graph" ? "nav-link active" : "nav-link"
+      }
+    >
+      <Link to="/Graph" className="nav-link">
+        Graph
+      </Link>
+    </li>
 
+    <li
+      className={
+        window.location.pathname === "/Faq" ? "nav-link active" : "nav-link"
+      }
+    >
+      <Link to="/Faq" className="nav-link">
+        Faq
+      </Link>
+    </li>
 
+    <li
+      className={
+        window.location.pathname === "/Profile" ? "nav-link active" : "nav-link"
+      }
+    >
+      <Link to="/Faq" className="nav-link">
+        Profile
+      </Link>
+    </li>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  </ul>
+);
+export default NavTabs;
 
 // export default class navbar extends React.Component {
 //   constructor(props) {
@@ -117,7 +83,7 @@ import Main from "../Main";
 //             <Nav className="ml-auto" navbar>
 
 //               {/* -----Create new----- */}
-//             <NavItem>   
+//             <NavItem>
 //                 <NavLink href="./Pages/Survey/">Create New</NavLink>
 //               </NavItem>
 
@@ -141,10 +107,10 @@ import Main from "../Main";
 //               <NavItem>
 //                 <NavLink href="/faq/">FAQ</NavLink>
 //               </NavItem>
-              
+
 //               <UncontrolledDropdown nav inNavbar>
 //                 <DropdownToggle nav caret>
-//                   Profile 
+//                   Profile
 //                 </DropdownToggle>
 //                 <DropdownMenu>
 //                   <DropdownItem>

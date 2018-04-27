@@ -1,6 +1,6 @@
 import React from "react";
 import "./Sidebar.css";
-import API from "../../utils/API";
+// import API from "../../utils/API";
 
 const Sidebar = (props) => (
  <div className="Sidebar">

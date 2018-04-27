@@ -32,8 +32,9 @@ export default class navbar extends React.Component {
   render() {
     return (
       <div className="strap-nav">
-        <Navbar color="light" light expand="sm">
-          <NavbarBrand href="/">Mood|Mapper</NavbarBrand>
+        <Navbar color="white" light expand="sm">
+          
+          <NavbarBrand href="/"><img src="logo.PNG" alt="logo" className="logo"></img></NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>

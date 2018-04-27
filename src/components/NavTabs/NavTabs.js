@@ -1,130 +1,88 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./NavTabs.css";
-import Main from "../Main";
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem } from 'reactstrap';
+  
 
-const NavTabs = props => (
-  <ul className="nav nav-tabs">
-    <li
-      className={
-        window.location.pathname === "/" ? "nav-link active" : "nav-link"
-      }
-    >
-      <Link to="/" className="nav-link">
-        Mood Mapper
-      </Link>
-    </li>
+export default class navbar extends React.Component {
+  constructor(props) {
+    super(props);
 
-    <li
-      className={
-        window.location.pathname === "/Survey" ? "nav-link active" : "nav-link"
-      }
-    >
-      <Link to="/Survey" className="nav-link">
-        Create New
-      </Link>
-    </li>
+    this.toggle = this.toggle.bind(this);
+    this.state = {
+      isOpen: false
+    };
+  }
+  toggle() {
+    this.setState({
+      isOpen: !this.state.isOpen
+    });
+  }
+  render() {
+    return (
+      <div className="strap-nav">
+        <Navbar color="light" light expand="sm">
+          <NavbarBrand href="/">Mood|Mapper</NavbarBrand>
+          <NavbarToggler onClick={this.toggle} />
+          <Collapse isOpen={this.state.isOpen} navbar>
+            <Nav className="ml-auto" navbar>
 
-    <li
-      className={
-        window.location.pathname === "/Graph" ? "nav-link active" : "nav-link"
-      }
-    >
-      <Link to="/Graph" className="nav-link">
-        Graph
-      </Link>
-    </li>
+              {/* -----Create new----- */}
+            <NavItem>
+                <NavLink href="/survey/">Create New</NavLink>
+              </NavItem>
 
-    <li
-      className={
-        window.location.pathname === "/Faq" ? "nav-link active" : "nav-link"
-      }
-    >
-      <Link to="/Faq" className="nav-link">
-        Faq
-      </Link>
-    </li>
+               {/* -----MoodHistory---- */}
 
-    <li
-      className={
-        window.location.pathname === "/Profile" ? "nav-link active" : "nav-link"
-      }
-    >
-      <Link to="/Faq" className="nav-link">
-        Profile
-      </Link>
-    </li>
+                <UncontrolledDropdown nav inNavbar>
+                <DropdownToggle nav caret>
+                  Mood History
+                </DropdownToggle>
+                <DropdownMenu>
+                  <DropdownItem>
+                  <NavLink href="/Graph/">View Graph</NavLink>
+                  </DropdownItem>
+                  <DropdownItem>
+                    Edit Previous Entry
+                  </DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown>
 
-  </ul>
-);
-export default NavTabs;
-
-// export default class navbar extends React.Component {
-//   constructor(props) {
-//     super(props);
-
-//     this.toggle = this.toggle.bind(this);
-//     this.state = {
-//       isOpen: false
-//     };
-//   }
-//   toggle() {
-//     this.setState({
-//       isOpen: !this.state.isOpen
-//     });
-//   }
-//   render() {
-//     return (
-//       <div className="strap-nav">
-//         <Navbar color="light-blue" light expand="sm">
-//           <NavbarBrand href="/">Mood|Mapper</NavbarBrand>
-//           <NavbarToggler onClick={this.toggle} />
-//           <Collapse isOpen={this.state.isOpen} navbar>
-//             <Nav className="ml-auto" navbar>
-
-//               {/* -----Create new----- */}
-//             <NavItem>
-//                 <NavLink href="./Pages/Survey/">Create New</NavLink>
-//               </NavItem>
-
-//                {/* -----MoodHistory---- */}
-
-//                 <UncontrolledDropdown nav inNavbar>
-//                 <DropdownToggle nav caret>
-//                   Mood History
-//                 </DropdownToggle>
-//                 <DropdownMenu>
-//                   <DropdownItem>
-//                      View Graph
-//                   </DropdownItem>
-//                   <DropdownItem>
-//                     Edit Previous Entry
-//                   </DropdownItem>
-//                 </DropdownMenu>
-//               </UncontrolledDropdown>
-
-//                {/* -----FAQ----- */}
-//               <NavItem>
-//                 <NavLink href="/faq/">FAQ</NavLink>
-//               </NavItem>
-
-//               <UncontrolledDropdown nav inNavbar>
-//                 <DropdownToggle nav caret>
-//                   Profile
-//                 </DropdownToggle>
-//                 <DropdownMenu>
-//                   <DropdownItem>
-//                     Your Profile
-//                   </DropdownItem>
-//                   <DropdownItem>
-//                     Logout
-//                   </DropdownItem>
-//                 </DropdownMenu>
-//               </UncontrolledDropdown>
-//             </Nav>
-//           </Collapse>
-//         </Navbar>
-//       </div>
-//     );
-//   }
-// }
+               {/* -----FAQ----- */}
+              <NavItem>
+                <NavLink href="/Faq/">FAQ</NavLink>
+              </NavItem>
+              
+              <UncontrolledDropdown nav inNavbar>
+                <DropdownToggle nav caret>
+                  Profile 
+                </DropdownToggle>
+                <DropdownMenu>
+                  <DropdownItem>
+                  <NavItem>
+                <NavLink href="/Profile">Profile</NavLink>
+              </NavItem>
+                  </DropdownItem>
+                  <DropdownItem>
+                    Logout
+                  </DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown>
+            </Nav>
+          </Collapse>
+        </Navbar>
+      </div>
+    );
+  }
+}

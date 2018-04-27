@@ -6,7 +6,6 @@ import NavTabs from "./components/NavTabs";
  
 import SidebarContainer from "./components/Sidebar";
 import Sidebar from "./components/Sidebar";
-// import Main from "./components/Main";
 import Footer from "./components/Footer";
 import Faq from "./components/Pages/Faq";
 import Graph from "./components/Pages/Graph";

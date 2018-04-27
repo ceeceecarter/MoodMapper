@@ -41,14 +41,14 @@ export default class navbar extends React.Component {
 
               {/* -----Create new----- */}
             <NavItem>
-                <NavLink href="/survey/">Create New</NavLink>
+                <NavLink href="/survey/"><h2>Create New</h2></NavLink>
               </NavItem>
 
                {/* -----MoodHistory---- */}
 
                 <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  Mood History
+                <DropdownToggle nav>
+                  <h2>Mood History</h2>
                 </DropdownToggle>
                 <DropdownMenu>
                   <DropdownItem>
@@ -62,12 +62,12 @@ export default class navbar extends React.Component {
 
                {/* -----FAQ----- */}
               <NavItem>
-                <NavLink href="/Faq/">FAQ</NavLink>
+                <NavLink href="/Faq/"><h2>FAQ</h2></NavLink>
               </NavItem>
               
               <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  Profile 
+                <DropdownToggle nav>
+                  <h2>Profile </h2>
                 </DropdownToggle>
                 <DropdownMenu>
                   <DropdownItem>

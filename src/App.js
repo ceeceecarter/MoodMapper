@@ -23,15 +23,15 @@ class App extends Component {
         <Wrapper>
           <Container className="reactstrapContainer">
             <Row>
-              <Col md="12" className="NavTabs">
+              <Col lg="12" className="NavTabs">
                 <NavTabs />
               </Col>
             </Row>
             <Row>
-              <Col md="2" className="sidebar">
+              <Col lg="2" className="sidebar">
                 <SidebarContainer />{" "}
               </Col>
-              <Col md="10" className="home">
+              <Col lg="10" className="home">
                 <Switch>
                   <Route exact path="/" component={Home} />
                   <Route exact path="/Survey" component={Survey} />
@@ -43,7 +43,7 @@ class App extends Component {
               </Col>
             </Row>
             <Row>
-              <Col md="12" className="footer">
+              <Col lg="12" className="footer">
                 <Footer />
               </Col>
             </Row>

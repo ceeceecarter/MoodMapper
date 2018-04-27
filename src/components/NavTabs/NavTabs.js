@@ -32,22 +32,23 @@ export default class navbar extends React.Component {
   render() {
     return (
       <div className="strap-nav">
-        <Navbar color="light" light expand="sm">
-          <NavbarBrand href="/">Mood|Mapper</NavbarBrand>
+        <Navbar color="white" light expand="sm">
+          
+          <NavbarBrand href="/"><img src="logo.PNG" alt="logo" className="logo"></img></NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
 
               {/* -----Create new----- */}
             <NavItem>
-                <NavLink href="/survey/">Create New</NavLink>
+                <NavLink href="/survey/"><h2>Create New</h2></NavLink>
               </NavItem>
 
                {/* -----MoodHistory---- */}
 
                 <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  Mood History
+                <DropdownToggle nav>
+                  <h2>Mood History</h2>
                 </DropdownToggle>
                 <DropdownMenu>
                   <DropdownItem>
@@ -61,12 +62,12 @@ export default class navbar extends React.Component {
 
                {/* -----FAQ----- */}
               <NavItem>
-                <NavLink href="/Faq/">FAQ</NavLink>
+                <NavLink href="/Faq/"><h2>FAQ</h2></NavLink>
               </NavItem>
               
               <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  Profile 
+                <DropdownToggle nav>
+                  <h2>Profile </h2>
                 </DropdownToggle>
                 <DropdownMenu>
                   <DropdownItem>

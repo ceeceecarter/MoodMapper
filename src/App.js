@@ -8,7 +8,7 @@ import SidebarContainer from "./components/Sidebar";
 import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
 import Faq from "./components/Pages/Faq";
-import Graph from "./components/Pages/Graph";
+import Graph from "./components/Graph/Graph";
 import History from "./components/Pages/History";
 import Home from "./components/Pages/Home";
 import Profile from "./components/Pages/Profile";

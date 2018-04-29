@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS "moodMapper";
+CREATE DATABASE "moodMapper";

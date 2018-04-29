@@ -22,13 +22,13 @@ app.use(bodyParser.urlencoded({
 // app.use("/tbd", routes);
 
 
-// listen on port 3000
-// const PORT = process.env.PORT || 3000;
-// db.sequelize.sync().then(function() {
-//   app.listen(PORT, function() {
-//     console.log("App listening on PORT " + PORT);
-//   });
-// });
+// listen on port 8000
+const PORT = process.env.PORT || 3306;
+db.sequelize.sync().then(function() {
+  app.listen(PORT, function() {
+    console.log("App listening on PORT " + PORT);
+  });
+});
 
 
 console.log(module.exports);

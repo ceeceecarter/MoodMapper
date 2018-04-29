@@ -7,7 +7,7 @@ export default class Graph extends Component {
     //super--calls the constructor of the parent class
     super(props)
     this.state = {
-      chartdata : [['Day', 'Mood'], [4, 8], [3, 6]] 
+      chartdata : [['Day', 'Anxiety', 'Depression'], [4, 8,3], [3, 6, 4]] 
     }
   }
   render () {

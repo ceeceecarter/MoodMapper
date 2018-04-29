@@ -52,7 +52,7 @@ export default class navbar extends React.Component {
                 </DropdownToggle>
                 <DropdownMenu>
                   <DropdownItem>
-                  <NavLink href="/Graph/">View Graph</NavLink>
+                  <NavLink href="/Graph">View Graph</NavLink>
                   </DropdownItem>
                   <DropdownItem>
                     Edit Previous Entry

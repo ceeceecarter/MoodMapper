@@ -21,11 +21,11 @@ module.exports =  function(sequelize, DataTypes){
             type: DataTypes.INTEGER,
             allowNull: false,        
         },
-        myDate: {
-            type: DataTypes.DATE,
-            allowNull: false,
-            defaultValue: Sequelize.NOW
-        }    
+        // myDate: {
+        //     type: DataTypes.DATE,
+        //     allowNull: false,
+        //     defaultValue: Sequelize.NOW
+        // }    
     });
 
     // Mood.associate = function(models){

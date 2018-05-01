@@ -20,6 +20,7 @@ export default class Graph extends Component {
         graph_id = "ScatterChart"
         width = "100%"
         height = "400px"
+        overflow = "auto"
         //legend_toggle is prop that sets prop value to true
         legend_toggle
         />

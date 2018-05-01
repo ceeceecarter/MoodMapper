@@ -1,11 +1,13 @@
 .quote {
     color: #B9BC28;
-    
 }
 
-.sidebar > .quote {
-    height: 100%;
+.sidebar>.quote {
     overflow: hidden;
+}
+
+.sidebar {
+    width: 20%;
 }
 
 h5 {

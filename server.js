@@ -28,23 +28,23 @@ app.use(bodyParser.urlencoded({
 
 // listen on port 8000
 // const PORT = process.env.PORT || 3306;
-// db.sequelize.sync().then(function() {
-//   app.listen(PORT, function() {
-//     console.log("App listening on PORT " + PORT);
-//   });
+db.sequelize.sync().then(function() {
+  app.listen(PORT, function() {
+    console.log("App listening on PORT " + PORT);
+  });
+});
+
+// if (process.env.NODE_ENV === "production") {
+//   app.use(express.static("client/build"));
+// }
+
+// // Send every request to the React app
+// // Define any API routes before this runs
+// app.get("*", function(req, res) {
+//   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 // });
 
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-}
-
-// Send every request to the React app
-// Define any API routes before this runs
-app.get("*", function(req, res) {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
-
-app.listen(PORT, function() {
-  console.log(`🌎 ==> Server now on port ${PORT}!`);
-});
-console.log(module.exports);
+// app.listen(PORT, function() {
+//   console.log(`🌎 ==> Server now on port ${PORT}!`);
+// });
+// console.log(module.exports);

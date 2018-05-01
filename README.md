@@ -24,10 +24,6 @@ Created as the final group project for the First Cohort of the University of Min
 * **Alycia Riley** - [LinkedIn](https://www.linkedin.com/in/alyciariley/)
 * **Elizabeth Risch-Janson** - [LinkedIn](https://www.linkedin.com/in/elizabeth-risch-janson/)
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
 ## Acknowledgments
 
 Our thanks to:

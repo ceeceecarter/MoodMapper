@@ -2,7 +2,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const sequelize = require("sequelize");
-// const routes = require('./routes');
+const routes = require('./routes');
 const path = require('path');
 const PORT = process.env.PORT || 3001;
 
@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 
-// app.use(routes);
+app.use(routes);
 // app.use("/tbd", routes);
 // app.use("/tbd", routes);
 

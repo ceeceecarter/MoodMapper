@@ -1,2 +1,2 @@
-DROP DATABASE IF EXISTS "moodMapper";
-CREATE DATABASE "moodMapper";
+DROP DATABASE IF EXISTS moodMapper;
+CREATE DATABASE moodMapper;

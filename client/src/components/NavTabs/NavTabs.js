@@ -34,7 +34,9 @@ export default class navbar extends React.Component {
       <div className="strap-nav">
         <Navbar color="white" light expand="sm">
           
-          <NavbarBrand href="/"><img src="logo.PNG" alt="logo" className="logo"></img></NavbarBrand>
+          <NavbarBrand href="/">
+            <img src="/logo.PNG" alt="logo" className="logo" />
+          </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>

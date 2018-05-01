@@ -5,26 +5,31 @@ import "./Sidebar.css";
 import axios from "axios";
 
 class SidebarContainer extends Component {
-    state = {        
-        result:{}               
+    // state = {        
+    //     result:{}               
              
-    };
+    // };
 
     componentDidMount(){
-        console.log("HII");
+        const self = this;
         axios.get("https://cors-anywhere.herokuapp.com/https://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json&json=?")
-        .then(response => this.setState({result:response.data}))
+        .then(response => self.setState({data:response.data}))
+        console.log(self);
     }
 
 
     render(){
         return (
             <div>
-                <Sidebar
-                   quoteText= {this.state.result.quoteText} 
-                   quoteAuthor={this.state.result.quoteAuthor}
-                
-                />
+                <h1> </h1>
+                { this.state && this.state.data &&
+                <div>
+                    <Sidebar
+                    quoteText= {this.state.data.quoteText} 
+                    quoteAuthor={this.state.data.quoteAuthor}
+                    />
+                </div>
+                }
             </div>
         )
     }

@@ -17,7 +17,7 @@ module.exports =  function(sequelize, DataTypes){
             type: DataTypes.INTEGER,
             allowNull: false,        
         },
-        happiness: {
+        sleep: {
             type: DataTypes.INTEGER,
             allowNull: false,        
         },

@@ -14,9 +14,7 @@ const Faq = () => (
       <p>No. This is a tool you may choose to use with your therapist, but it is not intended to supplement professional mental health care.</p>
       <li>Why don't I see my specific diagnosis on here?</li>
       <p>We chose to focus on anxiety and depression because they are the most commonly diagnosed mood disorders.</p>     
-
     </ul>
   </div>
 );
-
 export default Faq;

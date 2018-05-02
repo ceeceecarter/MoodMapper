@@ -54,10 +54,10 @@ export default class navbar extends React.Component {
                 </DropdownToggle>
                 <DropdownMenu>
                   <DropdownItem>
-                  <NavLink href="/Graph/">View Graph</NavLink>
+                  <NavLink href="/Graph/"><h2>View Graph</h2></NavLink>
                   </DropdownItem>
                   <DropdownItem>
-                    Edit Previous Entry
+                  <NavLink href="#"><h2>Edit Previous Entry</h2></NavLink>
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
@@ -69,16 +69,16 @@ export default class navbar extends React.Component {
               
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav>
-                  <h2>Profile </h2>
+                  <h2>Profile</h2>
                 </DropdownToggle>
                 <DropdownMenu>
                   <DropdownItem>
                   <NavItem>
-                <NavLink href="/Profile">Profile</NavLink>
+                <NavLink href="/Profile"><h2>Profile</h2></NavLink>
               </NavItem>
                   </DropdownItem>
                   <DropdownItem>
-                    Logout
+                   <NavLink href="#"><h2>Logout</h2></NavLink>
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>

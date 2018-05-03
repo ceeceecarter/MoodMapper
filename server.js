@@ -37,9 +37,9 @@ require("./routes")(app);
 // listen on port 8000
 // const PORT = process.env.PORT || 3306;
 
-// if (process.env.NODE_ENV === "production") {
-//   app.use(express.static("client/build"));
-// }
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
 
 // Send every request to the React app
 // Define any API routes before this runs

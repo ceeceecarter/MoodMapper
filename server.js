@@ -14,9 +14,8 @@ const db = require("./models");
 const app = express();
 // Serve static content for the app from the "public" directory in the application directory.
 
-app.use(express.static("public"));
+app.use('/', express.static(`${__dirname}/public`));
 // app.use(express.static("client/build"));
-
 // app.use(express.static("public"));
 
 
@@ -37,21 +36,22 @@ require("./routes")(app);
 
 // listen on port 8000
 // const PORT = process.env.PORT || 3306;
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
+
+// Send every request to the React app
+// Define any API routes before this runs
+app.get("*", function(req, res) {
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
+
 db.sequelize.sync().then(function() {
   app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
   });
 });
-
-// if (process.env.NODE_ENV === "production") {
-//   app.use(express.static("client/build"));
-// }
-
-// // Send every request to the React app
-// // Define any API routes before this runs
-// app.get("*", function(req, res) {
-//   res.sendFile(path.join(__dirname, "./client/build/index.html"));
-// });
 
 // app.listen(PORT, function() {
 //   console.log(`🌎 ==> Server now on port ${PORT}!`);

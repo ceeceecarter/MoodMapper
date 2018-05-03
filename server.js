@@ -2,7 +2,8 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const sequelize = require("sequelize");
-const routes = require('./routes');
+// const routes = require('./routes');;
+// const routes = require("./routes/api-routes.js")
 const path = require('path');
 const PORT = process.env.PORT || 3001;
 
@@ -12,8 +13,13 @@ const db = require("./models");
 
 const app = express();
 // Serve static content for the app from the "public" directory in the application directory.
+
+app.use(express.static("public"));
+// app.use(express.static("client/build"));
+=======
 // app.use(express.static("public"));
-app.use('/', express.static(`${__dirname}/client/build`));
+
+
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({
@@ -21,10 +27,13 @@ app.use(bodyParser.urlencoded({
 }));
 
 
-app.use(routes);
+// app.use(routes);
+// console.log('ROUTES', app)
+// app.use("/api/graph", routes);
+// console.log(app)
 // app.use("/tbd", routes);
-// app.use("/tbd", routes);
-
+// require("./routes/api-routes.js")(app);
+require("./routes")(app);
 
 // listen on port 8000
 // const PORT = process.env.PORT || 3306;

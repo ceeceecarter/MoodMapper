@@ -4,12 +4,16 @@ import quizQuestions from '../Survey/quizQuestions';
 import Quiz from '../Survey/Quiz';
 import Result from '../Survey/Result';
 import '../../App.css';
+import axios from "axios";
 
 class App extends Component {
+ 
 
   constructor(props) {
+    console.log("Survey", props);
     super(props);
-
+    
+    
     this.state = {
       counter: 0,
       questionId: 1,
@@ -23,8 +27,10 @@ class App extends Component {
 
     this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
   }
+ 
 
   componentWillMount() {
+    
     this.setState({
       question: quizQuestions[0].question,
       answerOptions: quizQuestions[0].answers
@@ -51,17 +57,33 @@ class App extends Component {
   //   return array;
   // };
 
+
   handleAnswerSelected(event) {
+    const stuff = [];
     this.setUserAnswer(event.currentTarget.value);
+    // console.log("SELECTED ANSWER", event.currentTarget.value);
+    const answer = event.currentTarget.value;
+    console.log("ANSWER", answer);
+    // console.log("QUESTIONID", this.state.questionId);
+    const question = this.state.questionId;
+    console.log("QUESTION", question);
+ 
+    
 
     if (this.state.questionId < quizQuestions.length) {
         setTimeout(() => this.setNextQuestion(), 300);
+  
     } else {
         setTimeout(() => this.setResults(this.getResults()), 300);
     }
+    stuff.push(answer); 
+    console.log(stuff);
   }
 
   setUserAnswer(answer) {
+    console.log("setUserAnswer", answer);
+    
+
     const updatedAnswersCount = update(this.state.answersCount, {
       [answer]: {$apply: (currentValue) => currentValue + 1}
     });

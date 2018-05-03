@@ -5,6 +5,8 @@ const sequelize = require("sequelize");
 // const routes = require('./routes');;
 // const routes = require("./routes/api-routes.js")
 const path = require('path');
+//Requiring passport 
+// const passport = require("./config/passport");
 const PORT = process.env.PORT || 3001;
 
 //Bring in the models

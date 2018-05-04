@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Container, Row, Col } from "reactstrap";
 import Wrapper from "./components/Wrapper";
 import NavTabs from "./components/NavTabs";
- 
 import SidebarContainer from "./components/Sidebar";
 import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";

@@ -1,0 +1,13 @@
+.quote {
+    color: #B9BC28;
+    
+}
+
+.sidebar.quote {
+    height: 100%;
+    overflow: hidden;
+}
+
+h5 {
+    font-size: 16px !important;
+}

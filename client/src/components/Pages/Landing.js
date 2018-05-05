@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch , Link} from "react-router-dom";
-import { Container, TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 import Wrapper from "../Wrapper";
 import Login from "../Login";
 import Main from "../Main";
-import App from "../../App";
 import "../../UserRoutes/html-routes.js"
 import "./PagesStyles/Landing.css";
 
@@ -12,7 +11,6 @@ import "./PagesStyles/Landing.css";
 class Landing extends Component {   
   render() {
     return (
-      <Router>
         <Wrapper> 
     
             <Row>
@@ -30,7 +28,6 @@ class Landing extends Component {
                   {/* <Route component={NoMatch} /> */}
                 </Switch>
         </Wrapper>
-      </Router>
     );
   }
 }

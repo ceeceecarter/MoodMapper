@@ -12,7 +12,8 @@ import History from "./components/Pages/History";
 import Home from "./components/Pages/Home";
 import Profile from "./components/Pages/Profile";
 import Survey from "./components/Pages/Survey";
-import Landing from "./components/Pages/Landing";
+import Landing from "./components/Pages/Landing"
+
 
 import "./App.css";
 
@@ -21,33 +22,7 @@ class App extends Component {
     return (
       <Router>
         <Wrapper>
-          <Container className="reactstrapContainer">
-            <Row>
-              <Col lg="12" className="NavTabs">
-                <NavTabs />
-              </Col>
-            </Row>
-            <Row>
-              <Col lg="2" className="sidebar">
-                <SidebarContainer />{" "}
-              </Col>
-              <Col lg="10" className="home">
-                <Switch>
-                  <Route exact path="/" component={Landing} />
-                  <Route exact path="/Survey" component={Survey} />
-                  <Route exact path="/Graph" component={Graph} />
-                  <Route exact path="/Faq" component={Faq} />
-                  <Route exact path="/Profile" component={Profile} />
-                  {/* <Route component={NoMatch} /> */}
-                </Switch>
-              </Col>
-            </Row>
-            <Row>
-              <Col lg="12" className="footer">
-                <Footer />
-              </Col>
-            </Row>
-          </Container>
+         <Landing />
         </Wrapper>
       </Router>
     );

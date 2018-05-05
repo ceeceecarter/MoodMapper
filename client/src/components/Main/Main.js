@@ -1,19 +1,19 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import { Container, Row, Col } from "reactstrap";
-import Wrapper from "./components/Wrapper";
-import NavTabs from "./components/NavTabs";
-import SidebarContainer from "./components/Sidebar";
-import Sidebar from "./components/Sidebar";
-import Footer from "./components/Footer";
-import Faq from "./components/Pages/Faq";
-import Graph from "./components/Pages/Graph";
-import History from "./components/Pages/History";
-import Home from "./components/Pages/Home";
-import Profile from "./components/Pages/Profile";
-import Survey from "./components/Pages/Survey";
+import Wrapper from "../Wrapper";
+import NavTabs from "../NavTabs";
+import SidebarContainer from "../Sidebar";
+import Sidebar from "../Sidebar";
+import Footer from "../Footer";
+import Faq from "../Pages/Faq";
+import Graph from "../Pages/Graph";
+import History from "../Pages/History";
+import Home from "../Pages/Home";
+import Profile from "../Pages/Profile";
+import Survey from "../Pages/Survey";
 
-import "./App.css";
+
 
 class App extends Component {
   render() {

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch , Link} from "react-router-dom";
 import { Container, TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
 import Wrapper from "../Wrapper";
 import Login from "../Login";
+import Main from "../Main";
 import App from "../../App";
 import "../../UserRoutes/html-routes.js"
 import "./PagesStyles/Landing.css";
@@ -22,7 +23,12 @@ class Landing extends Component {
               <Login /> 
               </Col>
             </Row>
-            <Link to ='/Main' >Main</Link>
+            <Switch>
+                  {/* <Route exact path="/" component={Landing} /> */}
+                  <Route exact path="/Main" component={Main} />
+        
+                  {/* <Route component={NoMatch} /> */}
+                </Switch>
         </Wrapper>
       </Router>
     );

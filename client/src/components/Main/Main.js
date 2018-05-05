@@ -11,7 +11,7 @@ import Survey from "../Pages/Survey";
 
 
 
-class App extends Component {
+class Main extends Component {
   render() {
     return (
       <Router>
@@ -27,7 +27,7 @@ class App extends Component {
               </Col>
               <Col lg="10" className="home">
                 <Switch>
-                  {/* <Route exact path="/" component={Landing} /> */}
+               /
                   <Route exact path="/Survey" component={Survey} />
                   <Route exact path="/Graph" component={Graph} />
                   <Route exact path="/Faq" component={Faq} />
@@ -47,4 +47,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Main;

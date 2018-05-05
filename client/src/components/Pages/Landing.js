@@ -21,12 +21,13 @@ class Landing extends Component {
               <Login /> 
               </Col>
             </Row>
-            <Switch>
+            {/* <Switch> */}
                   {/* <Route exact path="/" component={Landing} /> */}
-                  <Route exact path="/Main" component={Main} />
+               {/* <Link to="../Main/Main"> Main </Link> */}
+                  {/* <Route exact path="/Main" component={Main} /> */}
         
                   {/* <Route component={NoMatch} /> */}
-                </Switch>
+                {/* </Switch> */}
         </Wrapper>
     );
   }

@@ -23,9 +23,7 @@ app.use('/', express.static(`${__dirname}/public`));
 
 
 // parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({
-  extended: false
-}));
+app.use(bodyParser.json());
 
 
 // app.use(routes);

@@ -127,20 +127,34 @@ class App extends Component {
     }
 
     const whatevs = {
-      anxiety: this.state.finalAnswers[0],
-      depression: this.state.finalAnswers[1],
-      concentration: this.state.finalAnswers[2],
-      energy: this.state.finalAnswers[3],
-      sleep: this.state.finalAnswers[4]
-
+      anxiety: parseInt(this.state.finalAnswers[0]),
+      depression: parseInt(this.state.finalAnswers[1]),
+      concentration: parseInt(this.state.finalAnswers[2]),
+      energy: parseInt(this.state.finalAnswers[3]),
+      sleep: parseInt(this.state.finalAnswers[4])
     };
 
     console.log(whatevs)
 
-    axios.post("/api/survey", whatevs)
-    .then(function(data){
-      console.log(data);
-    })
+    axios({
+      method: 'post',
+      url: '/api/survey',
+      data : whatevs
+    });
+
+    // axios.post("/api/survey", {
+    //   anxiety: whatevs.anxiety,
+    //   depression: whatevs.depression,
+    //   concentration: whatevs.concentration,
+    //   energy: whatevs.energy,
+    //   sleep: whatevs.sleep
+    // })
+    // .then(function(response){
+    //   console.log(response);
+    // })
+    // .catch(function (error) {
+    //   console.log(error);
+    // })
     
   }
 

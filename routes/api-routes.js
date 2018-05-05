@@ -1,5 +1,5 @@
 var db = require("../models");
-// var axios = require("axios");
+var axios = require("axios");
 
 module.exports = function(app){
     //routes go here
@@ -12,13 +12,14 @@ module.exports = function(app){
 
 
     app.post("/api/survey", function(req, res){
+        console.log("BODY", req.body);
 
         db.Mood.create({
             anxiety: req.body.anxiety,
             depression: req.body.depression,
             concentration: req.body.concentration,
             energy: req.body.energy,
-            sleep: req.body.sleep,
+            sleep: req.body.sleep
             // usersssssss: XXXX            
         }).then(function(data){
             res.json(data);

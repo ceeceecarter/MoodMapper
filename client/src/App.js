@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import { Container, Row, Col } from "reactstrap";
 import Wrapper from "./components/Wrapper";
 import NavTabs from "./components/NavTabs";
@@ -12,6 +12,7 @@ import History from "./components/Pages/History";
 import Home from "./components/Pages/Home";
 import Profile from "./components/Pages/Profile";
 import Survey from "./components/Pages/Survey";
+import Landing from "./components/Pages/Landing";
 
 import "./App.css";
 
@@ -32,7 +33,7 @@ class App extends Component {
               </Col>
               <Col lg="10" className="home">
                 <Switch>
-                  <Route exact path="/" component={Home} />
+                  <Route exact path="/" component={Landing} />
                   <Route exact path="/Survey" component={Survey} />
                   <Route exact path="/Graph" component={Graph} />
                   <Route exact path="/Faq" component={Faq} />

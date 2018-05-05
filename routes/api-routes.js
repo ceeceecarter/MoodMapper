@@ -11,17 +11,17 @@ module.exports = function(app){
     });
 
 
-    // app.post("/api/survey", function(req, res){
+    app.post("/api/survey", function(req, res){
 
-    //     db.Mood.create({
-    //         anxiety: req.body.id.type,
-    //         depression: req.body.id.type,
-    //         concentration: req.body.id.type,
-    //         energy: req.body.id.type,
-    //         sleep: req.body.id.type,
-    //         // usersssssss: XXXX            
-    //     }).then(function(data){
-    //         res.json(data);
-    //     });
-    // });
+        db.Mood.create({
+            anxiety: req.body.anxiety,
+            depression: req.body.depression,
+            concentration: req.body.concentration,
+            energy: req.body.energy,
+            sleep: req.body.sleep,
+            // usersssssss: XXXX            
+        }).then(function(data){
+            res.json(data);
+        });
+    });
 };

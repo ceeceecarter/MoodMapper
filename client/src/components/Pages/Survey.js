@@ -20,9 +20,9 @@ class App extends Component {
       question: '',
       answerOptions: [],
       answer: '',
-      answersCount: {
-      },
-      result: ''
+      answersCount: {},
+      result: '',
+      finalAnswers: [],
     };
 
     this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
@@ -59,7 +59,7 @@ class App extends Component {
 
 
   handleAnswerSelected(event) {
-    const stuff = [];
+   
     this.setUserAnswer(event.currentTarget.value);
     // console.log("SELECTED ANSWER", event.currentTarget.value);
     const answer = event.currentTarget.value;
@@ -76,12 +76,12 @@ class App extends Component {
     } else {
         setTimeout(() => this.setResults(this.getResults()), 300);
     }
-    stuff.push(answer); 
-    console.log(stuff);
+   
   }
 
   setUserAnswer(answer) {
     console.log("setUserAnswer", answer);
+     
     
 
     const updatedAnswersCount = update(this.state.answersCount, {
@@ -90,7 +90,9 @@ class App extends Component {
 
     this.setState({
         answersCount: updatedAnswersCount,
-        answer: answer
+        answer: answer,
+        finalAnswers: [...this.state.finalAnswers, answer],
+        
     });
   }
 
@@ -117,11 +119,29 @@ class App extends Component {
   }
 
   setResults(result) {
+    const { finalAnswers } = this.state;
     if (result.length === 1) {
       this.setState({ result: result[0] });
     } else {
       this.setState({ result: 'Undetermined' });
     }
+
+    const whatevs = {
+      anxiety: this.state.finalAnswers[0],
+      depression: this.state.finalAnswers[1],
+      concentration: this.state.finalAnswers[2],
+      energy: this.state.finalAnswers[3],
+      sleep: this.state.finalAnswers[4]
+
+    };
+
+    console.log(whatevs)
+
+    axios.post("/api/survey", whatevs)
+    .then(function(data){
+      console.log(data);
+    })
+    
   }
 
   renderQuiz() {

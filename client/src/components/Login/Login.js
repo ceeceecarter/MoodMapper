@@ -1,6 +1,8 @@
 import React from 'react';
 import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
 import classnames from 'classnames';    
+import Forms from './Forms'
+import Signup from './Signup';
 import "./Login.css";
 
 
@@ -46,14 +48,14 @@ export default class Login extends React.Component {
           <TabPane tabId="1">
             <Row>
               <Col sm="12">
-                <h4>Tab 1 Contents</h4>
+                <h4><Forms /></h4>
               </Col>
             </Row>
           </TabPane>
           <TabPane tabId="2">
             <Row>
               <Col sm="6">
-              <h4>Tab 1 Contents</h4>
+              <h4><Signup /></h4>
               </Col>
     
             </Row>

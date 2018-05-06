@@ -13,7 +13,7 @@ export default class Signup extends React.Component {
           <Label for="examplePassword">Password</Label>
           <Input type="password" name="password" id="examplePassword" placeholder="password placeholder" />
         </FormGroup>
-        <Button>Submit</Button>
+        <Button id="submitSignup">Submit</Button>
       </Form>
     );
   }

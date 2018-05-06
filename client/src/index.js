@@ -1,10 +1,11 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import "./index.css";
-import App from "./App";
-// import Landing from "../src/components/Pages/Landing";
-import registerServiceWorker from "./registerServiceWorker";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+import ReactDOM from "react-dom";
+import React from "react";
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import App from "./App";
+import registerServiceWorker from "./registerServiceWorker";
+import Landing from "../src/components/Pages/Landing";
+
+ReactDOM.render(<Landing />, document.getElementById("root"));
 registerServiceWorker();

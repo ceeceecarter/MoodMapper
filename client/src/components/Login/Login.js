@@ -1,9 +1,8 @@
 import React from 'react';
-import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
+import { TabContent, TabPane, Nav, NavItem, NavLink, Row, Col } from 'reactstrap';
 import classnames from 'classnames';    
 import Forms from './Forms'
 import Signup from './Signup';
-import "./Login.css";
 
 
 export default class Login extends React.Component {

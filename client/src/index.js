@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import App from "./App";
 import registerServiceWorker from "./registerServiceWorker";
+import Landing from "../src/components/Pages/Landing";
 
-
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<Landing />, document.getElementById("root"));
 registerServiceWorker();
